@@ -34,7 +34,7 @@ func main() {
 		}
 		data, err := dataURI(name, mtype)
 		if err == nil {
-			fmt.Println(data, "\n")
+			fmt.Println(data)
 		}
 	}
 }
@@ -61,8 +61,8 @@ func dataURI(name, mtype string) (string, error) {
 }
 
 func detectMIME(name string) (string, error) {
-	ext := path.Ext(name)
-	if ext != "" {
+
+	if ext := path.Ext(name); ext != "" {
 		return mime.TypeByExtension(ext), nil
 	}
 
