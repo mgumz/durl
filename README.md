@@ -20,10 +20,7 @@ like
 
 ## Installation
 
-    $> export GOPATH=`pwd`
-    $> go get -v github.com/mgumz/durl
-    $> ./bin/durl -h
-
+    $> go install -v github.com/mgumz/durl@latest
 
 ## LICENSE
 
